@@ -5,7 +5,7 @@
     "jest": true
   },
   "plugins": ["lodash"],
-  "extends": ["src/packages/eslint-config", "plugin:react/jsx-runtime"],
+  "extends": ["plugin:react/jsx-runtime"],
   "rules": {
     "no-restricted-syntax": 0,
     "import/no-unresolved": 0,
@@ -17,16 +17,10 @@
     "lodash/import-scope": [2, "method"],
     "@next/next/no-img-element": 0,
     "no-sparse-arrays": 0,
-    "react-hooks/exhaustive-deps": [
-      "warn",
-      {
-        "additionalHooks": "(useFastRefreshEffect|useSlowRefreshEffect)"
-      }
-    ],
     // Start temporary rules
     // These rules are here just to keep the lint error to 0 during the migration to the new rule set
     // They need to be removed and fixed as soon as possible
-    "@typescript-eslint/ban-ts-comment": [1, { "ts-ignore": false, "ts-nocheck": false }],
+    // "@typescript-eslint/ban-ts-comment": [1, { "ts-ignore": false, "ts-nocheck": false }],
     "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-explicit-any": 0,
